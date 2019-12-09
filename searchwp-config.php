@@ -19,7 +19,7 @@ if (! defined('WPINC')) {
     die;
 }
 
-add_filter('searchwp_basic_auth_creds', __NAMESPACE__ '\\setBasicAuthCredentials');
+add_filter('searchwp_basic_auth_creds', __NAMESPACE__ . '\\setBasicAuthCredentials');
 
 function setBasicAuthCredentials(): array
 {
