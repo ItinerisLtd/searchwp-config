@@ -1,0 +1,45 @@
+{
+    "name": "itinerisltd/searchwp-config",
+    "type": "wordpress-muplugin",
+    "description": "Sets default SearchWP configurations",
+    "keywords": [
+        "security",
+        "search",
+        "searchwp",
+        "wordpress",
+        "wp"
+    ],
+    "homepage": "https://itinerisltd.github.io/searchwp-config/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Itineris Limited",
+            "email": "dev@itineris.co.uk",
+            "homepage": "https://itineris.co.uk/",
+            "role": "Company"
+        },
+        {
+            "name": "Lee Hanbury-Pickett",
+            "email": "lee.hanbury@gmail.com",
+            "homepage": "https://codepunchers.co.uk",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
+    },
+    "prefer-stable": true,
+    "support": {
+        "email": "dev@itineris.co.uk",
+        "issues": "https://github.com/ItinerisLtd/searchwp-config/issues",
+        "source": "https://github.com/ItinerisLtd/searchwp-config"
+    }
+}
