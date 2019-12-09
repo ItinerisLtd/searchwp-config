@@ -1,10 +1,10 @@
 <?php
 
 /**
- * Plugin Name:     Itineris SearchWP Security Configuration
+ * Plugin Name:     Itineris SearchWP Configuration
  * Plugin URI:      https://github.com/ItinerisLtd/searchwp-config/
  * Description:     Sets default SearchWP configurations
- * Version:         0.1.0
+ * Version:         0.1.1
  * Author:          Itineris Limited
  * Author URI:      https://www.itineris.co.uk/
  * Text Domain:     searchwp-config
