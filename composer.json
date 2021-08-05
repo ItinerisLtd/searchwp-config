@@ -37,6 +37,11 @@
             "dev-master": "0.1.x-dev"
         }
     },
+    "autoload": {
+        "psr-4": {
+            "Itineris\\SearchWpConfig\\": "src/"
+        }
+    },
     "prefer-stable": true,
     "support": {
         "email": "dev@itineris.co.uk",
