@@ -55,6 +55,7 @@ function set_cron_request_basic_auth_credentials(array $cron_request): array
 
     $cron_request['args']['headers']['Authorization'] = sprintf(
         'Basic %s',
+        // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode
         base64_encode(HTTP_BASIC_AUTH_USERNAME . ':' . HTTP_BASIC_AUTH_PASSWORD)
     );
 
