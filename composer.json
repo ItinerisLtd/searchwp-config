@@ -29,7 +29,8 @@
         "php": "^7.2"
     },
     "require-dev": {
-        "roave/security-advisories": "dev-master"
+        "roave/security-advisories": "dev-master",
+        "itinerisltd/itineris-wp-coding-standards": "^0.4.0"
     },
     "extra": {
         "branch-alias": {
