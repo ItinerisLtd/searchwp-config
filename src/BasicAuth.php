@@ -58,10 +58,7 @@ final class BasicAuth
 
     public function setCronRequestBasicAuthCredentials(array $cron_request): array
     {
-        if (! isset($cron_request['args']['headers'])) {
-            $cron_request['args']['headers'] = [];
-        }
-
+        $cron_request['args']['headers'] ??= [];
         if (isset($cron_request['args']['headers']['Authorization'])) {
             return $cron_request;
         }
@@ -69,7 +66,7 @@ final class BasicAuth
         $cron_request['args']['headers']['Authorization'] = sprintf(
             'Basic %s',
             // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode
-            base64_encode($this->username . ':' . $this->password)
+            base64_encode("{$this->username}:{$this->password}")
         );
 
         return $cron_request;
