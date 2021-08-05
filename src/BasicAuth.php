@@ -26,6 +26,7 @@ final class BasicAuth
 
         add_filter('searchwp_basic_auth_creds', [$instance, 'setBasicAuthCredentials']);
         add_filter('searchwp\indexer\http_basic_auth_credentials', [$instance, 'setBasicAuthCredentials']);
+        add_filter('searchwp\background_process\http_basic_auth_credentials', [$instance, 'setBasicAuthCredentials']);
         add_filter('cron_request', [$instance, 'setCronRequestBasicAuthCredentials'], 999);
     }
 
