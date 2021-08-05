@@ -42,5 +42,9 @@
         "email": "dev@itineris.co.uk",
         "issues": "https://github.com/ItinerisLtd/searchwp-config/issues",
         "source": "https://github.com/ItinerisLtd/searchwp-config"
+    },
+    "scripts": {
+        "style:check": "phpcs",
+        "style:fix": "phpcbf"
     }
 }
