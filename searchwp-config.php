@@ -60,3 +60,8 @@ function set_cron_request_basic_auth_credentials(array $cron_request): array
 
     return $cron_request;
 }
+
+/**
+ * Only enable alternative filter on local.
+ */
+add_filter('searchwp\indexer\alternate', fn (): bool => defined('WP_ENV') && 'development' === WP_ENV);
