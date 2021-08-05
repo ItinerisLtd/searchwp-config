@@ -24,10 +24,22 @@ final class BasicAuth
 
         $instance = new self(HTTP_BASIC_AUTH_USERNAME, HTTP_BASIC_AUTH_PASSWORD);
 
-        add_filter('searchwp_basic_auth_creds', [$instance, 'setBasicAuthCredentials']);
-        add_filter('searchwp\indexer\http_basic_auth_credentials', [$instance, 'setBasicAuthCredentials']);
-        add_filter('searchwp\background_process\http_basic_auth_credentials', [$instance, 'setBasicAuthCredentials']);
         add_filter('cron_request', [$instance, 'setCronRequestBasicAuthCredentials'], 999);
+
+        /**
+         * @since SearchWP 2.4
+         */
+        add_filter('searchwp_basic_auth_creds', [$instance, 'setBasicAuthCredentials']);
+
+        /**
+         * @since SearchWP 4.0.0
+         */
+        add_filter('searchwp\indexer\http_basic_auth_credentials', [$instance, 'setBasicAuthCredentials']);
+
+        /**
+         * @since SearchWP 4.1.0
+         */
+        add_filter('searchwp\background_process\http_basic_auth_credentials', [$instance, 'setBasicAuthCredentials']);
     }
 
     public function __construct(string $username, string $password)
