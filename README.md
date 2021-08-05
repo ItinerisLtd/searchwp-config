@@ -1,5 +1,6 @@
 # What does this plugin do?
-Currently, this only adds the `HTTP_BASIC_AUTH_USERNAME` AND `HTTP_BASIC_AUTH_PASSWORD` constants.
+1. Informs SearchWP of [basic auth values](searchwp\indexer\http_basic_auth_credentials) for indexing on protected sites.
+2. Enables the [alternate indexer](https://searchwp.com/documentation/hooks/searchwp-indexer-alternate/) on local environments
 
 # Installation
 Run `composer require itinerisltd/searchwp-config` in the Bedrock directory.
