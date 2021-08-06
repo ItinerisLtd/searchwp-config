@@ -53,7 +53,7 @@ final class BasicAuth
 
     protected static function isValidConstant(string $constant): bool
     {
-        return defined($constant) && ! empty($constant);
+        return defined($constant) && is_string($constant) && ! empty($constant);
     }
 
     public function setBasicAuthCredentials(): array
