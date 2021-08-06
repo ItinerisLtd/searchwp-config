@@ -18,7 +18,10 @@ final class BasicAuth
 
     public static function register(): void
     {
-        if (! defined('HTTP_BASIC_AUTH_USERNAME') || ! defined('HTTP_BASIC_AUTH_PASSWORD')) {
+        if (
+            ! self::isValidConstant('HTTP_BASIC_AUTH_USERNAME') ||
+            ! self::isValidConstant('HTTP_BASIC_AUTH_PASSWORD')
+        ) {
             return;
         }
 
@@ -46,6 +49,11 @@ final class BasicAuth
     {
         $this->username = $username;
         $this->password = $password;
+    }
+
+    protected static function isValidConstant(string $constant): bool
+    {
+        return defined($constant) && is_string(constant($constant)) && ! empty(constant($constant));
     }
 
     public function setBasicAuthCredentials(): array
