@@ -26,11 +26,11 @@
         }
     ],
     "require": {
-        "php": "^7.2"
+        "php": "^7.4 || ^8.0"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master",
-        "itinerisltd/itineris-wp-coding-standards": "^0.4.0"
+        "itinerisltd/itineris-wp-coding-standards": "^0.4.1"
     },
     "extra": {
         "branch-alias": {
@@ -51,5 +51,10 @@
     "scripts": {
         "style:check": "phpcs",
         "style:fix": "phpcbf"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
 }
