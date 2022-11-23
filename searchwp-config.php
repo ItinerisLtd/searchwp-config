@@ -4,7 +4,7 @@
  * Plugin Name:     Itineris SearchWP Configuration
  * Plugin URI:      https://github.com/ItinerisLtd/searchwp-config/
  * Description:     Sets default SearchWP configurations
- * Version:         0.2.0
+ * Version:         1.1.0
  * Author:          Itineris Limited
  * Author URI:      https://www.itineris.co.uk/
  * Text Domain:     searchwp-config
